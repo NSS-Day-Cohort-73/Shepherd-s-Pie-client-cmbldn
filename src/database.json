@@ -1,0 +1,285 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Brenda Peters",
+      "address": "602 Franklin Plains\nPort Hannahberg, ND 79261",
+      "phone": "2310414202",
+      "email": "amberwilliams@yahoo.com",
+      "admin": true
+    },
+    {
+      "id": 1,
+      "name": "Chris Haney",
+      "address": "8365 Ramsey Manor Apt. 956\nNorth Linda, AK 60783",
+      "phone": "403.845.9115",
+      "email": "sandrawyatt@yahoo.com",
+      "admin": true
+    },
+    {
+      "id": 1,
+      "name": "Melissa Mccormick",
+      "address": "856 Everett Roads\nBrownbury, NC 56537",
+      "phone": "+1-168-845-4840x619",
+      "email": "crossthomas@hotmail.com",
+      "admin": false
+    },
+    {
+      "id": 1,
+      "name": "Brandon Pierce",
+      "address": "5256 Barnes View Suite 715\nNorth Christina, CO 53559",
+      "phone": "788-693-0626x335",
+      "email": "martin28@yahoo.com",
+      "admin": false
+    },
+    {
+      "id": 1,
+      "name": "Craig Pittman",
+      "address": "8206 David Common Apt. 888\nMcculloughstad, MD 70613",
+      "phone": "446-229-6973x9595",
+      "email": "carolynjoseph@yahoo.com",
+      "admin": false
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "orderDateTime": "2024-03-27T23:12:52",
+      "orderCost": 37,
+      "tip": 4,
+      "tableNumber": 12,
+      "employeeId": 3,
+      "deliveryId": 4,
+      "deliveryFee": true
+    },
+    {
+      "id": 2,
+      "orderDateTime": "2024-02-04T08:27:21",
+      "orderCost": 18,
+      "tip": 10,
+      "tableNumber": 20,
+      "employeeId": 4,
+      "deliveryId": 2,
+      "deliveryFee": false
+    },
+    {
+      "id": 3,
+      "orderDateTime": "2024-02-13T23:47:58",
+      "orderCost": 13,
+      "tip": 1,
+      "tableNumber": 9,
+      "employeeId": 5,
+      "deliveryId": 3,
+      "deliveryFee": false
+    },
+    {
+      "id": 4,
+      "orderDateTime": "2024-03-13T05:36:14",
+      "orderCost": 20,
+      "tip": 2,
+      "tableNumber": 1,
+      "employeeId": 4,
+      "deliveryId": 1,
+      "deliveryFee": false
+    },
+    {
+      "id": 5,
+      "orderDateTime": "2024-07-21T09:47:11",
+      "orderCost": 34,
+      "tip": 4,
+      "tableNumber": 2,
+      "employeeId": 1,
+      "deliveryId": 5,
+      "deliveryFee": true
+    }
+  ],
+  "pizza": [
+    {
+      "id": 1,
+      "orderId": 1,
+      "sauceId": 2,
+      "cheeseId": 1,
+      "sizeId": 3,
+      "individualPizzaCost": 15
+    },
+    {
+      "id": 2,
+      "orderId": 3,
+      "sauceId": 3,
+      "cheeseId": 1,
+      "sizeId": 3,
+      "individualPizzaCost": 19
+    },
+    {
+      "id": 3,
+      "orderId": 3,
+      "sauceId": 1,
+      "cheeseId": 3,
+      "sizeId": 2,
+      "individualPizzaCost": 9
+    },
+    {
+      "id": 4,
+      "orderId": 5,
+      "sauceId": 1,
+      "cheeseId": 1,
+      "sizeId": 1,
+      "individualPizzaCost": 19
+    },
+    {
+      "id": 5,
+      "orderId": 1,
+      "sauceId": 3,
+      "cheeseId": 3,
+      "sizeId": 2,
+      "individualPizzaCost": 20
+    }
+  ],
+  "pizzaToppings": [
+    {
+      "id": 1,
+      "toppingsId": 5,
+      "pizzaId": 1
+    },
+    {
+      "id": 2,
+      "toppingsId": 3,
+      "pizzaId": 2
+    },
+    {
+      "id": 3,
+      "toppingsId": 4,
+      "pizzaId": 1
+    },
+    {
+      "id": 4,
+      "toppingsId": 1,
+      "pizzaId": 4
+    },
+    {
+      "id": 5,
+      "toppingsId": 5,
+      "pizzaId": 4
+    },
+    {
+      "id": 6,
+      "toppingsId": 4,
+      "pizzaId": 2
+    },
+    {
+      "id": 7,
+      "toppingsId": 1,
+      "pizzaId": 1
+    },
+    {
+      "id": 8,
+      "toppingsId": 3,
+      "pizzaId": 3
+    },
+    {
+      "id": 9,
+      "toppingsId": 1,
+      "pizzaId": 1
+    },
+    {
+      "id": 10,
+      "toppingsId": 4,
+      "pizzaId": 4
+    }
+  ],
+  "toppings": [
+    {
+      "id": 1,
+      "type": "sausage",
+      "price": 0.5
+    },
+    {
+      "id": 2,
+      "type": "pepperoni",
+      "price": 0.5
+    },
+    {
+      "id": 3,
+      "type": "mushroom",
+      "price": 0.5
+    },
+    {
+      "id": 4,
+      "type": "onion",
+      "price": 0.5
+    },
+    {
+      "id": 5,
+      "type": "green pepper",
+      "price": 0.5
+    },
+    {
+      "id": 6,
+      "type": "black olive",
+      "price": 0.5
+    },
+    {
+      "id": 7,
+      "type": "basil",
+      "price": 0.5
+    },
+    {
+      "id": 8,
+      "type": "extra cheese",
+      "price": 0.5
+    }
+  ],
+  "size": [
+    {
+      "id": 1,
+      "size": "small",
+      "price": 10
+    },
+    {
+      "id": 2,
+      "size": "medium",
+      "price": 12
+    },
+    {
+      "id": 3,
+      "size": "large",
+      "price": 15
+    }
+  ],
+  "cheese": [
+    {
+      "id": 1,
+      "type": "buffalo mozzarella"
+    },
+    {
+      "id": 2,
+      "type": "four cheese"
+    },
+    {
+      "id": 3,
+      "type": "vegan"
+    },
+    {
+      "id": 4,
+      "type": "none"
+    }
+  ],
+  "sauce": [
+    {
+      "id": 1,
+      "type": "marinara"
+    },
+    {
+      "id": 2,
+      "type": "arrabbiata"
+    },
+    {
+      "id": 3,
+      "type": "garlic white"
+    },
+    {
+      "id": 4,
+      "type": "none"
+    }
+  ]
+}
