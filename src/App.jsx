@@ -1,7 +1,10 @@
-import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import { NavBar } from "./components/navbar";
 
-function App() {
-  return <div className="App">Shepherd's Pies</div>;
-}
-
-export default App;
+export const App = () => {
+  return (
+    <BrowserRouter>
+      <NavBar />
+    </BrowserRouter>
+  );
+};
