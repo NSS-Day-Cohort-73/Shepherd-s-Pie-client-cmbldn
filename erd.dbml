@@ -1,69 +1,66 @@
 table employees {
 id int [pk]
-name varchar 
+name varchar
 address varchar
 phone int
 email varchar
-admin boolean 
+admin boolean
 }
-
-
-
 table orders {
 id int [pk]
 orderDateTime datetime
-orderCost int 
-tip int 
-tableNumber int 
+orderCost int
+tip int
+tableNumber int
 employeeId int  [ref: > employees.id]
 deliveryId int [ref: > employees.id]
-deliveryFee boolean 
-
+deliveryFee boolean
 }
-
-
-
 table pizza {
 id int [pk]
 orderId int [ref: > orders.id]
 sauceId int [ref: > sauce.id]
 cheeseId int [ref: > cheese.id]
 sizeId int [ref: > size.id]
-
 // pizzaToppingsId int [ref: > pizzaToppings.id]
-indivualPizzaCost int 
-
+indivualPizzaCost int
 }
-
 table pizzaToppings {
-  id int [pk] 
+  id int [pk]
   toppingsId int [ref: > toppings.id]
   pizzaId int [ref: > pizza.id]
-
-
 }
-
 table toppings {
 id int [pk]
 type varchar
-price int 
-
+price int
 }
-
 table size {
-id int [pk] 
+id int [pk]
 size int
 price int
 }
-
 table cheese {
 id int [pk]
 type varchar
-
 }
-
 table sauce {
 id int [pk]
 type varchar
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
