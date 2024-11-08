@@ -1,0 +1,106 @@
+.outer-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+}
+
+.delivery-container {
+  display: flex;
+  border: 5px solid black;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #d2a679;
+  width: 40rem;
+  min-height: 30rem;
+  align-items: center;
+}
+
+.dinein-container {
+  min-height: 30rem;
+  width: 40rem;
+  display: flex;
+  border: 5px solid black;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #d2a679;
+  align-items: center;
+}
+
+#employee-dropdown {
+  margin-top: 2rem;
+  background-color: #db5aba;
+  height: 30px;
+  width: 200px;
+  color: black;
+  border: 2px black solid;
+  font-size: 19px;
+}
+
+.address-bar {
+  background-color: #db5aba;
+  height: 30px;
+  width: 200px;
+  color: black;
+  border: 2px black solid;
+  font-size: 19px;
+}
+
+.address-bar::placeholder {
+  color: black;
+}
+
+.number-bar {
+  background-color: #db5aba;
+  height: 30px;
+  width: 200px;
+  color: black;
+  border: 2px black solid;
+  font-size: 19px;
+}
+
+.number-bar::placeholder {
+  color: black;
+}
+
+.tip-box {
+  background-color: #db5aba;
+  height: 30px;
+  width: 200px;
+  color: black;
+  border: 2px black solid;
+  font-size: 19px;
+}
+
+.tip-box::placeholder {
+  color: black;
+}
+
+#table-dropdown {
+  background-color: #db5aba;
+  height: 30px;
+  width: 200px;
+  color: black;
+  border: 2px black solid;
+  font-size: 19px;
+}
+
+.dine-in-btn {
+  margin-bottom: 0;
+  background-color: #f64740;
+  height: 150px;
+  width: 300px;
+  color: black;
+  border: 2px black solid;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.delivery-submit-button {
+  background-color: #f64740;
+  height: 150px;
+  width: 300px;
+  color: black;
+  border: 2px black solid;
+  font-size: 19px;
+  margin-bottom: 10px;
+}

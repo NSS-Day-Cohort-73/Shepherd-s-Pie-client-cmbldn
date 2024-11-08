@@ -6,7 +6,7 @@ export const HomePage = () => {
   return (
     <div className="whole-container">
       <div className="image-container">
-        <img src={logo} alt="Sheperds-pie-logo" />
+        <img src={logo} alt="Sheperds-pie-logo" id="img-img" />
       </div>
       <div className="button-container">
         <Link to="/create-order">

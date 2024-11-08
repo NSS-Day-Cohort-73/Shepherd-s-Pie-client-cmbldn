@@ -22,7 +22,7 @@ export const Login = () => {
           })
         );
 
-        window.location.href = "/";
+        navigate("/home-page");
       } else {
         window.alert("Invalid Email");
       }
