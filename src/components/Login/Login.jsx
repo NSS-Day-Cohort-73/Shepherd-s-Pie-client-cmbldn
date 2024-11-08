@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getEmployeeByEmail } from "../services/employeeService.jsx";
-import "./Login.css";
+import { getEmployeeByEmail } from "../../services/employeeService.jsx";
+import logo from "../../assets/logo.png";
+import "./login.css";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +22,7 @@ export const Login = () => {
           })
         );
 
-        navigate("/");
+        window.location.href = "/";
       } else {
         window.alert("Invalid Email");
       }
@@ -32,7 +33,12 @@ export const Login = () => {
     <main className="container-login">
       <section>
         <form className="form-login" onSubmit={handleLogin}>
-          <h1>Shepard's Pie</h1>
+          <h1>
+            <div className="image-container">
+              <img src={logo} alt="Sheperds-pie-logo" />
+            </div>
+            Shepard's Pie
+          </h1>
           <fieldset>
             <div className="form-group">
               <input

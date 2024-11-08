@@ -1,25 +1,32 @@
 import { Link } from "react-router-dom";
-import image from "../assets/image.png"; // Make sure path is correct
+import { useState, useEffect } from "react";
+import image from "../assets/image.png";
 import "./navbar.css";
 
 export const NavBar = () => {
-  const admin = true;
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    const employeeData = JSON.parse(localStorage.getItem("shepards_employee"));
+    setIsAdmin(employeeData?.admin || false);
+  }, []);
+
   return (
     <ul className="navbar">
       <div className="navbar-left">
-        {admin && (
-          <li className="navbar-item">
-            <Link to="/employees" className="navbar-link">
-              Employees
-            </Link>
-          </li>
-        )}
-        {admin && (
-          <li className="navbar-item">
-            <Link to="/sales" className="navbar-link">
-              Sales Report
-            </Link>
-          </li>
+        {isAdmin && (
+          <>
+            <li className="navbar-item">
+              <Link to="/employees" className="navbar-link">
+                Employees
+              </Link>
+            </li>
+            <li className="navbar-item">
+              <Link to="/sales" className="navbar-link">
+                Sales Report
+              </Link>
+            </li>
+          </>
         )}
       </div>
 

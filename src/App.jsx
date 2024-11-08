@@ -1,15 +1,18 @@
+import { Route, Routes } from "react-router-dom";
+import { HomePage } from "./components/homepage/HomePage";
+import { Login } from "./components/Login/Login";
+import { NavBar } from "./components/navbar";
 import "./App.css";
 
-import { NavBar } from "./components/navbar";
-import { HomePage } from "./components/HomePage";
-
-function App() {
+export const App = () => {
   return (
     <>
-      <NavBar />
-      <HomePage />
+      {window.location.pathname !== "/login" && <NavBar />}
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/homepage" element={<HomePage />} />
+      </Routes>
     </>
   );
-}
-
-export default App;
+};
