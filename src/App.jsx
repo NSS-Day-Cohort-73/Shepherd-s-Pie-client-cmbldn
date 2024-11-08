@@ -1,7 +1,8 @@
 import "./App.css";
+import { CreateOrder } from "./components/CreateOrder";
 import { HomePage } from "./components/HomePage";
 function App() {
-  return <></>;
+  return <>{<CreateOrder />}</>;
 }
 
 export default App;
