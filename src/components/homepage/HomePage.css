@@ -8,12 +8,14 @@ body {
 
 .image-container {
   display: flex;
-  justify-content: center;
+
   margin-bottom: 5rem;
   margin-top: 5rem;
+  width: 18rem;
 }
 
-.image-container img {
+#img-img {
+  display: flex;
   width: 18rem;
 }
 
