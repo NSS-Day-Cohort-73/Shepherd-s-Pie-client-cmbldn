@@ -43,26 +43,6 @@
   ],
   "orders": [
     {
-      "id": 1,
-      "orderDateTime": "2024-03-27T23:12:52",
-      "orderCost": 37,
-      "tip": 4,
-      "tableNumber": 12,
-      "employeeId": 3,
-      "deliveryId": 4,
-      "deliveryFee": true
-    },
-    {
-      "id": 2,
-      "orderDateTime": "2024-02-04T08:27:21",
-      "orderCost": 18,
-      "tip": 10,
-      "tableNumber": 20,
-      "employeeId": 4,
-      "deliveryId": 2,
-      "deliveryFee": false
-    },
-    {
       "id": 3,
       "orderDateTime": "2024-02-13T23:47:58",
       "orderCost": 13,
@@ -95,14 +75,6 @@
   ],
   "pizza": [
     {
-      "id": 1,
-      "orderId": 1,
-      "sauceId": 2,
-      "cheeseId": 1,
-      "sizeId": 3,
-      "individualPizzaCost": 15
-    },
-    {
       "id": 2,
       "orderId": 3,
       "sauceId": 3,
@@ -125,14 +97,6 @@
       "cheeseId": 1,
       "sizeId": 1,
       "individualPizzaCost": 19
-    },
-    {
-      "id": 5,
-      "orderId": 1,
-      "sauceId": 3,
-      "cheeseId": 3,
-      "sizeId": 2,
-      "individualPizzaCost": 20
     }
   ],
   "pizzaToppings": [
