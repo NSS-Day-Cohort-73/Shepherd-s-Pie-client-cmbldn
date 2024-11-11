@@ -59,3 +59,10 @@ h2 {
   background-color: #f64740;
   color: #fbf5f3;
 }
+
+.add-btn {
+  background-color: #0892a5;
+  color: #fbf5f3;
+  display: flex;
+  margin: auto;
+}
