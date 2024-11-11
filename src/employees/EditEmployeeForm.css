@@ -1,0 +1,39 @@
+.edit-employees {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-right: 150px;
+  padding-left: 150px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border: 2px solid black;
+  background-color: #f64740;
+}
+
+.edit-employee {
+  margin-top: 10px;
+}
+
+.delete-button {
+  margin-left: auto;
+}
+
+.add-btn {
+  margin-top: 20px;
+}
+
+.edit-employee-btns {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+.save-btn {
+  background-color: #0892a5;
+  color: #fbf5f3;
+}
+
+.cancel-btn {
+  background-color: #0892a5;
+  color: #fbf5f3;
+}
