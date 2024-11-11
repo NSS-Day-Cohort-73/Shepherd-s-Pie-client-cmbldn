@@ -3,3 +3,13 @@ export const getEmployeeByEmail = (email) => {
     res.json()
   );
 };
+
+export const getOrders = () => {
+  return fetch(`http://localhost:8088/orders`).then((res) => res.json());
+};
+
+export const deleteOrder = (orderId) => {
+  return fetch(`http://localhost:8088/orders/${orderId}`, {
+    method: "DELETE",
+  });
+};

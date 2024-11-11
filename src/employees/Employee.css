@@ -1,0 +1,68 @@
+body {
+  background-color: #463730;
+}
+
+.employees {
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+}
+
+.employee-info {
+  margin: 20px;
+  padding: 20px;
+  background-color: #fbf5f3;
+}
+
+.employee-details {
+  text-align: center;
+}
+
+.employee-management {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form {
+  margin: auto;
+  text-align: left;
+}
+
+.form-details {
+  margin-top: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.employee-info {
+  border: 2px, solid, black;
+}
+
+.form-container {
+  border: 2px, solid, black;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 150px;
+  padding-right: 150px;
+  background-color: #f64740;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+.edit-button {
+  background-color: #f64740;
+  color: #fbf5f3;
+}
+
+.add-btn {
+  background-color: #0892a5;
+  color: #fbf5f3;
+  display: flex;
+  margin: auto;
+}
