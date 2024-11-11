@@ -4,7 +4,7 @@ import { Login } from "./components/Login/Login";
 import { NavBar } from "./components/navbar/navbar";
 import { CreateOrder } from "./components/order_creation/CreateOrder";
 import "./App.css";
-import { Order } from "./components/order_creation/OrderHistory";
+import { EmployeeList } from "./employees/EmployeeList";
 
 export const App = () => {
   return (
@@ -20,7 +20,7 @@ export const App = () => {
       >
         <Route path="home-page" element={<HomePage />} />
         <Route path="create-order" element={<CreateOrder />} />
-        <Route path="order-history" element={<Order />} />
+        <Route path="employees" element={<EmployeeList />} />
       </Route>
       <Route index element={<Login />} />
     </Routes>
