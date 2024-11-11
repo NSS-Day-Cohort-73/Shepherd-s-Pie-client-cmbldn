@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import image from "../assets/image.png";
+import image from "/src/assets/image.png";
 import "./navbar.css";
 
 export const NavBar = () => {
@@ -32,12 +32,12 @@ export const NavBar = () => {
 
       <div className="navbar-right">
         <li className="navbar-item">
-          <Link to="/orderHistory" className="navbar-link">
+          <Link to="/order-history" className="navbar-link">
             Order History
           </Link>
         </li>
         <li className="navbar-item">
-          <Link to="/homepage" className="navbar-link logo">
+          <Link to="/home-page" className="navbar-link logo">
             <img src={image} alt="Shepard's Pie Logo" className="logo-image" />
             <span>Shepard's Pie</span>
           </Link>

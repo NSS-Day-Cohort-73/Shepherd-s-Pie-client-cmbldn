@@ -5,7 +5,6 @@
   padding: 0;
   margin: 0;
   background-color: #0892a5;
-  text-size
 }
 
 .navbar-left,
@@ -15,10 +14,9 @@
   align-items: center;
 }
 
-
 .navbar-item {
   padding: 10px;
-  font-size: 1.5rem
+  font-size: 1.5rem;
 }
 
 .navbar-link {
@@ -46,8 +44,7 @@
 
 /* Optional: Add hover effects */
 .navbar-link:hover {
-background-color: #DB5ABA;
-  
+  background-color: #db5aba;
 }
 
 .logo-image:hover {
