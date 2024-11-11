@@ -1,0 +1,117 @@
+.outer-container {
+  display: flex;
+  margin-top: 1.5rem;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #463730;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.delivery-or-dinein-box,
+.shown-pizza {
+  width: 20rem; /* Set fixed width to create square shape */
+  height: 15rem; /* Same height to make it a square */
+  padding: 1rem;
+  background-color: #db5aba;
+  border: 5px solid #2a2723;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  color: #000;
+}
+
+.size-options {
+  flex: 1;
+  padding: 1.5rem; /* Extra padding to push radio buttons inward */
+  background-color: #d2a679;
+  border: 5px solid #2a2723;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  max-width: 60rem; /* Constrain maximum width for a larger rectangle */
+  margin: 0 auto; /* Center align */
+  box-sizing: border-box;
+  font-size: 30px;
+}
+
+.cheese-options,
+.sauce-options,
+.toppings-choices {
+  font-size: 30px;
+  flex: 1;
+  padding: 1rem;
+  background-color: #d2a679;
+  border: 3px solid #2a2723;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  justify-content: space-evenly;
+}
+.cheese-options select {
+  font-size: 30px;
+  background-color: #db5aba;
+}
+.sauce-options select {
+  display: flex;
+  font-size: 30px;
+  background-color: #db5aba;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-self: center;
+}
+
+.cheese-choose-one {
+  border: 2px black solid;
+  margin-top: 17.5rem;
+  background-color: #f64740;
+  padding: 30px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.sauce-choose-one {
+  border: 2px black solid;
+  margin-top: 17.5rem;
+  background-color: #f64740;
+  padding: 30px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.topping-choose {
+  border: 2px black solid;
+  margin-top: 3rem;
+  background-color: #f64740;
+  padding: 30px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.toppings-choices {
+  align-items: center; /* Align checkboxes to the left */
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+button {
+  background-color: #e85848;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: 2px black solid;
+  cursor: pointer;
+  font-size: 2rem;
+}

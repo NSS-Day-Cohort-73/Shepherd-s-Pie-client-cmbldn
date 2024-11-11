@@ -37,7 +37,7 @@ export const NavBar = () => {
           </Link>
         </li>
         <li className="navbar-item">
-          <Link to="/homepage" className="navbar-link logo">
+          <Link to="/home-page" className="navbar-link logo">
             <img src={image} alt="Shepard's Pie Logo" className="logo-image" />
             <span>Shepard's Pie</span>
           </Link>
