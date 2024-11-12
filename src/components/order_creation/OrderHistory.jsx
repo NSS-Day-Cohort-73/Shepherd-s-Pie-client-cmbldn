@@ -5,6 +5,7 @@ import { getAllEmployees } from "../../services/employeeService.js";
 
 export const Order = () => {
   const [orders, setOrders] = useState([]);
+  const [employees, setEmployees] = useState([]);
 
   const getAndSetOrders = () => {
     getOrders().then((orderArray) => {
@@ -14,6 +15,9 @@ export const Order = () => {
 
   useEffect(() => {
     getAndSetOrders();
+    getAllEmployees().then((employeeArray) => {
+      setEmployees(employeeArray);
+    });
   }, []);
 
   const handleDelete = (orderId) => {
@@ -28,11 +32,11 @@ export const Order = () => {
     return date.toLocaleString();
   };
 
-  useEffect(() => {
-    getAllEmployees().then((employeeArray) => {
-      setEmployees(employeeArray);
-    });
-  }, []);
+  // Helper function to get employee name
+  const getEmployeeName = (employeeId) => {
+    const employee = employees.find((emp) => emp.id === employeeId);
+    return employee ? employee.name : "Unknown Driver";
+  };
 
   return (
     <div className="orders">
@@ -53,7 +57,14 @@ export const Order = () => {
                 </div>
               )}
               <div className="delivery-info">
-                {orderObj.deliveryFee ? "Delivery" : "Dine-in"}
+                {orderObj.deliveryFee ? (
+                  <div className="delivery-driver">
+                    <div>Delivery</div>
+                    <div>Driver: {getEmployeeName(orderObj.employeeId)}</div>
+                  </div>
+                ) : (
+                  "Dine-in"
+                )}
               </div>
             </div>
             <button

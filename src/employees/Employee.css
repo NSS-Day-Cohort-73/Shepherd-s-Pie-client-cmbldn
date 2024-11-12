@@ -23,11 +23,6 @@ body {
   justify-content: space-evenly;
 }
 
-.form {
-  margin: auto;
-  text-align: left;
-}
-
 .form-details {
   margin-top: 10px;
 }
@@ -38,6 +33,11 @@ h2 {
 
 .employee-info {
   border: 2px, solid, black;
+}
+.form {
+  display: flex;
+  margin: auto;
+  text-align: left;
 }
 
 .form-container {
