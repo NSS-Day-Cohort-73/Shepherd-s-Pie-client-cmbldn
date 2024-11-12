@@ -93,16 +93,6 @@
       "employeeId": 1,
       "deliveryId": null,
       "deliveryFee": false
-    },
-    {
-      "id": 24,
-      "orderDateTime": "2024-11-12T15:13:55.467Z",
-      "orderCost": 0,
-      "tip": 7,
-      "tableNumber": 3,
-      "employeeId": 1,
-      "deliveryId": null,
-      "deliveryFee": false
     }
   ],
   "pizza": [
