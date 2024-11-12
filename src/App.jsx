@@ -4,11 +4,11 @@ import { HomePage } from "./components/homepage/HomePage";
 import { Login } from "./components/Login/Login";
 import { NavBar } from "./components/navbar/navbar";
 import { CreateOrder } from "./components/order_creation/CreateOrder";
-
 import { EmployeeList } from "./employees/EmployeeList";
 import { Order } from "./components/order_creation/OrderHistory";
 import { PizzaCreation } from "./pizza/PizzaCreation";
 import { SalesReport } from "./components/sales report/salesreport";
+import { OrderDetails } from "./components/order_creation/orderDetails";
 
 export const App = () => {
   return (
@@ -27,6 +27,7 @@ export const App = () => {
         <Route path="pizza" element={<PizzaCreation />} />
         <Route path="employees" element={<EmployeeList />} />
         <Route path="order-history" element={<Order />} />
+        <Route path="/order-details" element={<OrderDetails />} />
         <Route path="sales" element={<SalesReport />} />
       </Route>
       <Route index element={<Login />} />

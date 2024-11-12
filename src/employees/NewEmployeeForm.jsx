@@ -34,9 +34,9 @@ export const NewEmployeeForm = ({ onNewEmployeeAdded }) => {
 
   return (
     <div className="form">
-      <div className="form-container">
-        <h2>Add New Employee</h2>
-        <form onSubmit={handleSubmit}>
+      <div>
+        <form className="edit-employees" onSubmit={handleSubmit}>
+          <h2>Add New Employee</h2>
           <div>
             <label>Name: </label>
             <input

@@ -31,14 +31,6 @@
       "phone": "446-229-6973x9595",
       "email": "carolynjoseph@yahoo.com",
       "admin": false
-    },
-    {
-      "name": "mlee",
-      "address": "1105 brentwood lane\n",
-      "phone": "6767676765",
-      "email": "mlml@fmfmf",
-      "admin": false,
-      "id": 6
     }
   ],
   "orders": [
@@ -97,6 +89,16 @@
       "orderDateTime": "2024-11-12T03:05:44.933Z",
       "orderCost": 0,
       "tip": 10,
+      "tableNumber": 3,
+      "employeeId": 1,
+      "deliveryId": null,
+      "deliveryFee": false
+    },
+    {
+      "id": 24,
+      "orderDateTime": "2024-11-12T15:13:55.467Z",
+      "orderCost": 0,
+      "tip": 7,
       "tableNumber": 3,
       "employeeId": 1,
       "deliveryId": null,
