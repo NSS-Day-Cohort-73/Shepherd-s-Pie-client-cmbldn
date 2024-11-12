@@ -1,9 +1,9 @@
 body {
   background-color: #463730;
 }
+
 .whole-container {
   display: flex;
-
   flex-direction: column;
 }
 
@@ -11,20 +11,21 @@ body {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5rem;
-  margin-top: 5rem;
-  width: 18rem;
+  max-width: 90%; /* Increased to 90% for larger size */
+  margin-top: 2rem; /* Added some top margin */
 }
 
 #img-img {
   display: flex;
-
-  width: 18rem;
+  width: 100%; /* Added width 100% to fill container */
+  height: auto;
+  margin: auto; /* Maintain aspect ratio */
 }
 
 .button-container {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 3rem; /* Added space between image and buttons */
 }
 
 .btn-primary {

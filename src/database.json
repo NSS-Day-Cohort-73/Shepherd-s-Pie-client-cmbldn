@@ -25,14 +25,6 @@
       "admin": false
     },
     {
-      "id": 4,
-      "name": "Brandon Pierce",
-      "address": "5256 Barnes View Suite 715\nNorth Christina, CO 53559",
-      "phone": "788-693-0626x335",
-      "email": "martin28@yahoo.com",
-      "admin": false
-    },
-    {
       "id": 5,
       "name": "Craig Pittman",
       "address": "8206 David Common Apt. 888\nMcculloughstad, MD 70613",
@@ -50,16 +42,6 @@
       "tableNumber": 9,
       "employeeId": 5,
       "deliveryId": 3,
-      "deliveryFee": false
-    },
-    {
-      "id": 4,
-      "orderDateTime": "2024-03-13T05:36:14",
-      "orderCost": 20,
-      "tip": 2,
-      "tableNumber": 1,
-      "employeeId": 4,
-      "deliveryId": 1,
       "deliveryFee": false
     },
     {
@@ -83,122 +65,32 @@
       "deliveryFee": false
     },
     {
-      "id": 7,
-      "orderDateTime": "2024-11-11T21:15:55.709Z",
+      "id": 21,
+      "orderDateTime": "2024-11-11T22:27:31.199Z",
       "orderCost": 0,
-      "tip": 20,
-      "tableNumber": 7,
-      "employeeId": 4,
+      "tip": 12,
+      "tableNumber": null,
+      "employeeId": 3,
+      "deliveryId": 0,
+      "deliveryFee": true
+    },
+    {
+      "id": 22,
+      "orderDateTime": "2024-11-12T03:05:07.823Z",
+      "orderCost": 0,
+      "tip": 8,
+      "tableNumber": 5,
+      "employeeId": 1,
       "deliveryId": null,
       "deliveryFee": false
     },
     {
-      "id": 8,
-      "orderDateTime": "2024-11-11T21:15:55.709Z",
+      "id": 23,
+      "orderDateTime": "2024-11-12T03:05:44.933Z",
       "orderCost": 0,
-      "tip": 20,
-      "tableNumber": 7,
-      "employeeId": 4,
-      "deliveryId": null,
-      "deliveryFee": false
-    },
-    {
-      "id": 9,
-      "orderDateTime": "2024-11-11T21:15:55.709Z",
-      "orderCost": 0,
-      "tip": 20,
-      "tableNumber": 7,
-      "employeeId": 4,
-      "deliveryId": null,
-      "deliveryFee": false
-    },
-    {
-      "id": 10,
-      "orderDateTime": "2024-11-11T21:15:55.709Z",
-      "orderCost": 0,
-      "tip": 20,
-      "tableNumber": 7,
-      "employeeId": 4,
-      "deliveryId": null,
-      "deliveryFee": false
-    },
-    {
-      "id": 11,
-      "orderDateTime": "2024-11-11T21:15:55.709Z",
-      "orderCost": 0,
-      "tip": 20,
-      "tableNumber": 7,
-      "employeeId": 4,
-      "deliveryId": null,
-      "deliveryFee": false
-    },
-    {
-      "id": 12,
-      "orderDateTime": "2024-11-11T21:15:55.709Z",
-      "orderCost": 0,
-      "tip": 20,
-      "tableNumber": 7,
-      "employeeId": 4,
-      "deliveryId": null,
-      "deliveryFee": false
-    },
-    {
-      "id": 13,
-      "orderDateTime": "2024-11-11T21:15:55.709Z",
-      "orderCost": 0,
-      "tip": 20,
-      "tableNumber": 7,
-      "employeeId": 4,
-      "deliveryId": null,
-      "deliveryFee": false
-    },
-    {
-      "id": 14,
-      "orderDateTime": "2024-11-11T21:15:55.709Z",
-      "orderCost": 0,
-      "tip": 20,
-      "tableNumber": 7,
-      "employeeId": 4,
-      "deliveryId": null,
-      "deliveryFee": false
-    },
-    {
-      "id": 15,
-      "orderDateTime": "2024-11-11T21:15:55.709Z",
-      "orderCost": 0,
-      "tip": 20,
-      "tableNumber": 7,
-      "employeeId": 4,
-      "deliveryId": null,
-      "deliveryFee": false
-    },
-    {
-      "id": 16,
-      "orderDateTime": "2024-11-11T21:15:55.709Z",
-      "orderCost": 0,
-      "tip": 20,
-      "tableNumber": 7,
-      "employeeId": 4,
-      "deliveryId": null,
-      "deliveryFee": false
-    },
-    {
-      "id": 17,
-      "orderDateTime": "2024-11-11T21:15:55.709Z",
-      "orderCost": 0,
-      "tip": 20,
-      "tableNumber": 7,
-      "employeeId": 4,
-      "deliveryId": null,
-      "deliveryFee": false
-    },
-    {
-      "id": 18,
-      "orderDateTime": "2024-11-11T21:15:55.709Z",
-      "orderCost": 0,
-      "tip": 20,
-      "tableNumber": 7,
-      "employeeId": 4,
+      "tip": 10,
+      "tableNumber": 3,
+      "employeeId": 1,
       "deliveryId": null,
       "deliveryFee": false
     },

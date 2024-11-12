@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import { deleteOrder, getOrders } from "../../services/employeeService.jsx";
 import "./OrderHistory.css";
 import { getAllEmployees } from "../../services/employeeService.js";
+import { useNavigate } from "react-router-dom";
 
 export const Order = () => {
   const [orders, setOrders] = useState([]);
+  const [employees, setEmployees] = useState([]);
+  const navigate = useNavigate();
 
   const getAndSetOrders = () => {
     getOrders().then((orderArray) => {
@@ -14,6 +17,9 @@ export const Order = () => {
 
   useEffect(() => {
     getAndSetOrders();
+    getAllEmployees().then((employeeArray) => {
+      setEmployees(employeeArray);
+    });
   }, []);
 
   const handleDelete = (orderId) => {
@@ -21,24 +27,29 @@ export const Order = () => {
       getAndSetOrders();
     });
   };
-
+  const handleCardClick = () => {
+    navigate("/order-details");
+  };
   // Format date/time for display
   const formatDateTime = (dateTimeString) => {
     const date = new Date(dateTimeString);
     return date.toLocaleString();
   };
 
-  useEffect(() => {
-    getAllEmployees().then((employeeArray) => {
-      setEmployees(employeeArray);
-    });
-  }, []);
+  const getEmployeeName = (employeeId) => {
+    const employee = employees.find((emp) => emp.id === employeeId);
+    return employee ? employee.name : "Unknown Driver";
+  };
 
   return (
     <div className="orders">
       {orders.map((orderObj) => {
         return (
-          <div key={orderObj.id} className="order-card">
+          <div
+            key={orderObj.id}
+            className="order-card"
+            onClick={handleCardClick}
+          >
             <h3>Order #{orderObj.id}</h3>
             <div className="datetime">
               {formatDateTime(orderObj.orderDateTime)}
@@ -53,7 +64,14 @@ export const Order = () => {
                 </div>
               )}
               <div className="delivery-info">
-                {orderObj.deliveryFee ? "Delivery" : "Dine-in"}
+                {orderObj.deliveryFee ? (
+                  <div className="delivery-driver">
+                    <div>Delivery</div>
+                    <div>Driver: {getEmployeeName(orderObj.employeeId)}</div>
+                  </div>
+                ) : (
+                  "Dine-in"
+                )}
               </div>
             </div>
             <button
