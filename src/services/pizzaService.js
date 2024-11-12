@@ -1,3 +1,7 @@
+export const getPizzas = () => {
+  return fetch("http://localhost:8088/pizza").then((res) => res.json());
+};
+
 export const getPizzaSizes = () => {
   return fetch("http://localhost:8088/size").then((res) => res.json());
 };
@@ -31,6 +35,30 @@ export const postOrder = (newOrder) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(newOrder),
+  }).then((res) => {
+    return res.json();
+  });
+};
+
+export const postPizza = (pizza) => {
+  return fetch(`http://localhost:8088/pizza`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(pizza),
+  }).then((res) => {
+    return res.json();
+  });
+};
+
+export const postUpdatedPizza = (pizza) => {
+  return fetch(`http://localhost:8088/pizza/${pizza.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(pizza),
   }).then((res) => {
     return res.json();
   });

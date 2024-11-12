@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import {
   getPizzaCheeses,
+  getPizzas,
   getPizzaSauce,
   getPizzasByOrder,
   getPizzaSizes,
   getPizzaToppings,
+  postPizza,
+  postUpdatedPizza,
 } from "../services/pizzaService";
 import "./PizzaCreation.css";
 import { useLocation } from "react-router-dom";
@@ -21,7 +24,7 @@ export const PizzaCreation = () => {
 
   const [toppingOptions, setToppingOptions] = useState([]);
 
-  const [currentPizzas, setCurrentPizzas] = useState([]);
+  const [allPizzas, setAllPizzas] = useState([]);
 
   const [assignedPizzas, setAssignedPizzas] = useState([]);
 
@@ -35,6 +38,19 @@ export const PizzaCreation = () => {
     deliveryId: newOrder.deliveryId ? newOrder.deliveryId : null,
     deliveryFee: newOrder.deliveryFee,
   });
+
+  const [currentPizza, setCurrentPizza] = useState({
+    id: 0,
+    orderId: newOrder.id,
+    sauceId: 0,
+    cheeseId: 0,
+    sizeId: 0,
+    individualPizzaCost: 0,
+  });
+
+  useEffect(() => {
+    getPizzas().then(setAllPizzas);
+  }, []);
 
   useEffect(() => {
     getPizzaSizes().then(setSizeOptions);
@@ -50,11 +66,74 @@ export const PizzaCreation = () => {
 
   useEffect(() => {
     getPizzaSauce().then(setSauceOptions);
-  });
+  }, []);
 
   useEffect(() => {
     getPizzaToppings().then(setToppingOptions);
   }, []);
+
+  const setPizzaSize = (sizeId) => {
+    setCurrentPizza((prevPizza) => ({
+      ...prevPizza,
+      sizeId: sizeId,
+    }));
+    const existingPizza = allPizzas.find(
+      (pizza) => pizza.id === currentPizza.id
+    );
+    if (existingPizza) {
+      postUpdatedPizza(currentPizza);
+      getPizzas().then(setAllPizzas);
+    } else {
+      postPizza(currentPizza).then((newPizza) => {
+        setCurrentPizza((prevPizza) => ({
+          ...prevPizza,
+          id: newPizza.id,
+        }));
+      });
+    }
+  };
+
+  const setPizzaCheese = (cheeseId) => {
+    setCurrentPizza((prevPizza) => ({
+      ...prevPizza,
+      cheeseId: cheeseId,
+    }));
+    const existingPizza = allPizzas.find(
+      (pizza) => pizza.id === currentPizza.id
+    );
+    if (existingPizza) {
+      postUpdatedPizza(currentPizza);
+      getPizzas().then(setAllPizzas);
+    } else {
+      postPizza(currentPizza).then((newPizza) => {
+        setCurrentPizza((prevPizza) => ({
+          ...prevPizza,
+          id: newPizza.id,
+        }));
+      });
+    }
+  };
+
+  const setPizzaSauce = (sauceId) => {
+    setCurrentPizza((prevPizza) => ({
+      ...prevPizza,
+      sauceId: sauceId,
+    }));
+    const existingPizza = allPizzas.find(
+      (pizza) => pizza.id === currentPizza.id
+    );
+    if (existingPizza) {
+      postUpdatedPizza(currentPizza);
+      getPizzas().then(setAllPizzas);
+    } else {
+      postPizza(currentPizza).then((newPizza) => {
+        setCurrentPizza((prevPizza) => ({
+          ...prevPizza,
+          id: newPizza.id,
+        }));
+      });
+    }
+  };
 
   return (
     <div className="outer-container">
@@ -75,6 +154,9 @@ export const PizzaCreation = () => {
                   name="sizes"
                   key={sizeObj.id}
                   value={sizeObj.id}
+                  onChange={(event) => {
+                    setPizzaSize(parseInt(event.target.value));
+                  }}
                 />
                 <label htmlFor={`size-${sizeObj.id}`}>
                   {sizeObj.size}(${sizeObj.price})
@@ -87,7 +169,12 @@ export const PizzaCreation = () => {
       <div className="row">
         <div className="cheese-options">
           <h2>Cheeses:</h2>
-          <select name="cheeses">
+          <select
+            name="cheeses"
+            onChange={(event) => {
+              setPizzaCheese(parseInt(event.target.value));
+            }}
+          >
             <option value="0">Choose a cheese</option>
             {cheeseOptions.map((cheese) => {
               return <option value={cheese.id}>{cheese.type}</option>;
@@ -97,7 +184,12 @@ export const PizzaCreation = () => {
         </div>
         <div className="sauce-options">
           <h2>Sauces:</h2>
-          <select className="sauce">
+          <select
+            className="sauce"
+            onChange={(event) => {
+              setPizzaSauce(parseInt(event.target.value));
+            }}
+          >
             <option value="0">Choose a sauce</option>
             {sauceOptions.map((sauce) => {
               return <option value={sauce.id}>{sauce.type}</option>;
